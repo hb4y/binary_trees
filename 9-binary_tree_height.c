@@ -9,7 +9,12 @@ size_t binary_tree_h(const binary_tree_t *tree);
  */
 size_t binary_tree_height(const binary_tree_t *tree)
 {
-	size_t depth = binary_tree_h(tree);
+	size_t depth;
+
+	if (!tree)
+		return (0);
+
+	depth = binary_tree_h(tree);
 
 	return (depth - 1);
 }
